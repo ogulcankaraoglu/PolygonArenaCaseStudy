@@ -28,6 +28,8 @@ public class WeaponCustomization : MonoBehaviour
     public Color ButtonActiveColor;
     public Color ButtonPassiveColor;
 
+    public AttachmentCameraManager CameraManager;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -47,6 +49,7 @@ public class WeaponCustomization : MonoBehaviour
         CurrentWeaponManager.SaveAttachmentData(CurrentAttachmentData.AttachmentType,CurrentAttachmentData.AttachmentID);
         SetEquipButtonState(CurrentWeaponManager.IsAttachmentEquipped(CurrentAttachmentData.AttachmentType,CurrentAttachmentData.AttachmentID));
         AttachmentCategories.UpdateCategorySprite(CurrentAttachmentData.AttachmentType);
+        CameraManager.EquipCameraAnimation();
     }
 
     public void SetEquipButtonState(bool _isActive)
@@ -66,6 +69,7 @@ public class WeaponCustomization : MonoBehaviour
 
     public void SetCurrentWeaponStats()
     {
+        CameraManager.CalculateOffset();
         StatsPanel.SetWeaponStatTexts(CurrentWeaponData);
     }
 

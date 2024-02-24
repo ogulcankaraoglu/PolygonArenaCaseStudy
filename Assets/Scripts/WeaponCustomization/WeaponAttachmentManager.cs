@@ -71,6 +71,7 @@ public class WeaponAttachmentManager : MonoBehaviour
             else
             {
                 _currentAttachment.AttachmentReference.SetActive(true);
+                WeaponCustomization.Instance.CameraManager.SetAttachmentView(_currentAttachment.AttachmentViewPoint);
             }
            
         }
@@ -96,6 +97,7 @@ public class WeaponAttachment
 {
     public WeaponAttachmentData AttachmentData;
     public GameObject AttachmentReference;
+    public Transform AttachmentViewPoint;
 }
 
 [System.Serializable]
