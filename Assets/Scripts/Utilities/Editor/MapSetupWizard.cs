@@ -87,6 +87,8 @@ public class MapSetupWizard : EditorWindow
         {
             item.gameObject.AddComponent<BoxCollider>();
             item.gameObject.layer = 6;
+            MeshFilter meshFilter = item.GetComponent<MeshFilter>();
+            DestroyImmediate(meshFilter);
             DestroyImmediate(item);
         }
     }
@@ -98,6 +100,8 @@ public class MapSetupWizard : EditorWindow
         {
             item.gameObject.AddComponent<MeshCollider>();
             item.gameObject.layer = 7;
+            MeshFilter meshFilter = item.GetComponent<MeshFilter>();
+            DestroyImmediate(meshFilter);
             DestroyImmediate(item);
         }
     }
