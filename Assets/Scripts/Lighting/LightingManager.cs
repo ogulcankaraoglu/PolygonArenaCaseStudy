@@ -8,6 +8,7 @@ public class LightingManager : MonoBehaviour
 
     private void Start()
     {
+        // Set the gradient skybox for backgorund, no need to update GI since we only want the background visual.
         RenderSettings.skybox = InventorySkybox;
     }
 }
