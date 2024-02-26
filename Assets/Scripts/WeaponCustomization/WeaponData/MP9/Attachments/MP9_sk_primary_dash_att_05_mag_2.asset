@@ -16,5 +16,5 @@ MonoBehaviour:
   AttachmentID: 5
   AttachmentType: 1
   AttachmentSprite: {fileID: 21300000, guid: d59684ab38e12fd41a22c9e43f1418c9, type: 3}
-  AttachmentBackgroundColor: {r: 0.6039216, g: 0.78039217, b: 0.7921569, a: 1}
-  AttachmentFrameColor: {r: 0.6862745, g: 0.8235294, b: 0.827451, a: 1}
+  AttachmentBackgroundColor: {r: 0.27327827, g: 0.7830189, b: 0.22530258, a: 1}
+  AttachmentFrameColor: {r: 0.4563902, g: 0.8301887, b: 0.41901034, a: 1}
